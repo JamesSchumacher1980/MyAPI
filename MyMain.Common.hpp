@@ -14,6 +14,9 @@ namespace James_Common
         ApiLong32;
     typedef long long ApiSigned64, ApiLong64;
     typedef unsigned long long ApiUnsigned64, ApiULong64;
+    
+    typedef float ApiSingleFPV, ApiFloat;
+    typedef double APIDoubleFPV, ApiDouble;
 }
 
 #endif
