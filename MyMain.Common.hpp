@@ -41,6 +41,7 @@ namespace James_Common
         Api_SAnsiString(const Api_SAnsiString * ptrStrings[], ApiULong32 ulStringCount);
         
         // Member Functions
+        DataOption GetOptions() const; 
         ApiBoolean IsReadOnly() const;
         ApiBoolean IsGrowableBuffer() const;
         ApiULong32 GetMaxBufferSize() const;
