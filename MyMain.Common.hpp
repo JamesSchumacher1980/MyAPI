@@ -18,6 +18,8 @@ namespace James_Common
     typedef float ApiSingleFPV, ApiFloat;
     typedef double APIDoubleFPV, ApiDouble;
     
+    typedef bool ApiBoolean, ApiBool;
+    
     struct Api_SAnsiString
     {
     public:
@@ -38,7 +40,12 @@ namespace James_Common
         Api_SAnsuString(const Api_SAnsiString & str, ApiULong32 ulStartIndex, ApiULong ulCharCount);
         Api_SAnsiString(const Api_SAnsiString * ptrStrings[], ApiULong32 ulStringCount);
         
-        //
+        // Member Functions
+        inline ApiBoolean IsReadOnly() const
+        {
+            return (mv_enOptions & DataOption::ReadOnly) == DataOption::ReadOnly;
+        }
+        
         
     protected:
         DataOption mv_enOptions;
