@@ -20,8 +20,26 @@ namespace James_Common
     
     typedef bool ApiBoolean, ApiBool;
     
+    namespace Runtime
+    {
+        nanespace Compiler
+        (
+            template <typename CharType> struct BasicString
+            {
+                BasicString(const ApiChar * pstr, ApiULong64 ulLength) : mv_Chars(pstr), mv_ulLength(ulLength)
+                {
+                }
+                
+                const CharType * mv_Chars;
+                ApiULong32 mv_ulLength;
+            };
+        }
+    }
+    
     typedef void * (*ApiFuncPtr_AllocateMemory)(ApiULong64);
     typedef ApiBoolean (*ApiFuncPtr_FreeMemory)(void *);
+    
+    
     
     struct Api_SAnsiString
     {
