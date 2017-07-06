@@ -18,6 +18,17 @@ namespace James_Common
     typedef float ApiSingleFPV, ApiFloat;
     typedef double APIDoubleFPV, ApiDouble;
     
+    struct Api_SAnsiString
+    {
+    public:
+        // Construction
+        Api_SAnsiString();
+        
+    protected:
+        ApiChar * mv_pChars;
+        ApiULong32 mv_ulLength;
+    };
+    
     struct ApiTypeInfo
     {
     };
