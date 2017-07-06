@@ -38,8 +38,10 @@ namespace James_Common
         Api_SAnsuString(const Api_SAnsiString & str, ApiULong32 ulStartIndex, ApiULong ulCharCount);
         Api_SAnsiString(const Api_SAnsiString * ptrStrings[], ApiULong32 ulStringCount);
         
-    protected:
+        //
         
+    protected:
+        DataOption mv_enOptions;
         ApiChar * mv_pChars;
         ApiULong32 mv_ulLength;
     };
