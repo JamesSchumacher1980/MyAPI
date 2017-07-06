@@ -42,6 +42,7 @@ namespace James_Common
         Api_SAnsiString(const Api_SAnsiString & str);
         Api_SAnsuString(const Api_SAnsiString & str, ApiULong32 ulStartIndex, ApiULong ulCharCount);
         Api_SAnsiString(const Api_SAnsiString * ptrStrings[], ApiULong32 ulStringCount);
+        ~Api_SAnsiString();
         
         
         // Member Functions
