@@ -12,7 +12,8 @@ namespace James_Common
     typedef long ApiSigned32, ApiLong32;
     typedef unsigned long ApiUnsigned32,
         ApiLong32;
-    
+    typedef long long ApiSigned64, ApiLong64;
+    typedef unsigned long long ApiUnsigned64, ApiULong64;
 }
 
 #endif
