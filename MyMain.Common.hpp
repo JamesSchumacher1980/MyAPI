@@ -26,6 +26,7 @@ namespace James_Common
         Api_SAnsiString(ApiChar ch, ApiULong32 ulCount);
         Api_SAnsiString(const ApiChar * pChars);
         Api_SAnsiString(const ApiChar * pChars, ApiULong32 ulStartIndex, ApiULong32 ulCharCount);
+        Api_SAnsiString(const ApiSAnsiString & str);
         
     protected:
         ApiChar * mv_pChars;
