@@ -20,7 +20,7 @@ namespace James_Common
     
     typedef bool ApiBoolean, ApiBool;
     
-    typedef void * (*ApiFuncPtr_AllocateMemory(ApiULong64);
+    typedef void * (*ApiFuncPtr_AllocateMemory)(ApiULong64);
     typedef ApiBoolean (*ApiFuncPtr_FreeMemory)(void *);
     
     struct Api_SAnsiString
