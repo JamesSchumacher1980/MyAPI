@@ -17,6 +17,10 @@ namespace James_Common
     
     typedef float ApiSingleFPV, ApiFloat;
     typedef double APIDoubleFPV, ApiDouble;
+    
+    struct ApiTypeInfo
+    {
+    };
 }
 
 #endif
