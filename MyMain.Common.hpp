@@ -20,6 +20,9 @@ namespace James_Common
     
     typedef bool ApiBoolean, ApiBool;
     
+    typedef void * (*ApiFuncPtr_AllocateMemory(ApiULong64);
+    typedef ApiBoolean (*ApiFuncPtr_FreeMemory)(void *);
+    
     struct Api_SAnsiString
     {
     public:
@@ -40,12 +43,12 @@ namespace James_Common
         Api_SAnsuString(const Api_SAnsiString & str, ApiULong32 ulStartIndex, ApiULong ulCharCount);
         Api_SAnsiString(const Api_SAnsiString * ptrStrings[], ApiULong32 ulStringCount);
         
+        
         // Member Functions
         DataOption GetOptions() const; 
         ApiBoolean IsReadOnly() const;
         ApiBoolean IsGrowableBuffer() const;
         ApiULong32 GetMaxBufferSize() const;
-        
         
     protected:
         DataOption mv_enOptions;
