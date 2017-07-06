@@ -21,14 +21,25 @@ namespace James_Common
     struct Api_SAnsiString
     {
     public:
+        enum DataOption : ApiULong32
+        {
+            ReadOnly = 0x00000001,
+            GrowableBuffer = 0x00000002,
+            MaxLengthMask = 0xFFFFFFFC,
+            MaxLengthRightShift = 2
+        };
+         
         // Construction
         Api_SAnsiString();
         Api_SAnsiString(ApiChar ch, ApiULong32 ulCount);
         Api_SAnsiString(const ApiChar * pChars);
         Api_SAnsiString(const ApiChar * pChars, ApiULong32 ulStartIndex, ApiULong32 ulCharCount);
-        Api_SAnsiString(const ApiSAnsiString & str);
+        Api_SAnsiString(const Api_SAnsiString & str);
+        Api_SAnsuString(const Api_SAnsiString & str, ApiULong32 ulStartIndex, ApiULong ulCharCount);
+        Api_SAnsiString(const Api_SAnsiString * ptrStrings[], ApiULong32 ulStringCount);
         
     protected:
+        
         ApiChar * mv_pChars;
         ApiULong32 mv_ulLength;
     };
